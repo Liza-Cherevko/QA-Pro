@@ -1,19 +1,19 @@
- number33
- 3
- qwerty
-42hillel
-false
-1
-Nan
-1
-61
-2
-10false
-false
-27
-true
-1
-false
-true
-false
-false
+console.log('number' + 3 + 3) = number33
+ console.log(null + 3) = 3
+ console.log(5 && "qwerty")= qwerty
+ console.log(+'40' + +'2' + "hillel")= 42hillel
+ console.log('10' - 5 === 6)= false
+ console.log(true + false)= 1
+ console.log('4px' - 3)= Nan
+ console.log('4' - 3)= 1
+ console.log('6' + 3 ** 0)= 61
+ console.log(12 / '6')= 2
+ console.log('10' + (5 === 6))= 10false
+ console.log(null == '')= false
+ console.log(3 ** (9 / 3))= 27
+ console.log(!!'false' == !!'true')= true
+ console.log(0 || '0' && 1)= 1
+ console.log((+null == false) < 1)= false
+ console.log(false && true || true)= true
+ console.log(false && (false || true))= false
+ console.log((+null == false) < 1 ** 5)= false
