@@ -1,7 +1,7 @@
 
 let question = +prompt('Скільки вам років?')
-
-if (Math.sign(question) == -1) {
+let validate = Math.sign(question) == -1 || Math.sign(question) == 0
+if (validate) {
     console.log('невірне значення')
 } else if (question == 1) {
     console.log('Вам ' + question + ' рік');
