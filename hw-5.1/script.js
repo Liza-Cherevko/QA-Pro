@@ -1,16 +1,24 @@
-
-let star = "*";
-let str = " ";
-let lines = 5;
 // #1
-while (star.length <= 5) {
-    console.log(star);
-    star += "*";
-}
-
-// #2
-// for (let i = 0; i < lines; i++) {
-//     str += star;
-//     console.log(str);
+// let str = " "
+// function triangle(lines, symbol) {
+//     for (let i = 0; i <= lines; i++) {
+//         str += symbol;
+//         console.log(str);
+//     }
 // }
 
+// triangle(5, '#')
+
+
+// #2
+
+let i = 0;
+let str = " ";
+function triangle(lines, symbol) {
+    while (i < lines) {
+        str += symbol;
+        i++;
+        console.log(str);
+    }
+}
+triangle(5, '$')
