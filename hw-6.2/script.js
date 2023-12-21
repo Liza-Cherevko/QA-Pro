@@ -15,10 +15,10 @@ console.log(pad('world', 'Hello my ', 4, true));
 console.log(pad('world', '+', 7, true));
 
 
-console.log(pad('world', 'Hello my ', 8, true));
-console.log(pad('world', 'Hello my ', 12, true));
-console.log(pad('world', 'Hello my ', 13, true));
+console.log(pad('world', '+', 8, true));
+console.log(pad('world', '-', 12, true));
+console.log(pad('world', '3', 13, true));
 
-console.log(pad('New', ' day', 4, false));
-console.log(pad('New', ' day', 5, false));
-console.log(pad('New', ' day', 6, false));
+console.log(pad('New', ' %', 4, false));
+console.log(pad('New', '%', 5, false));
+console.log(pad('New', '%', 6, false));
