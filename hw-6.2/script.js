@@ -1,14 +1,24 @@
-function myPadStartEnd(str, char, num, bool) {
-    let result;
-    if (bool == true) {
-        result = char.repeat(num) + str
-    } else result = str + char.repeat(num)
+function pad(str, char, length, addToStart) {
+    if (str.length >= length) {
+        return str;
+    }
 
-    console.log(result)
-
+    const padLength = length - str.length;
+    const padString = char.repeat(padLength);
+    console.log(padLength)
+    console.log(padString)
+    return addToStart ? padString + str : str + padString;
 }
 
-myPadStartEnd('test', '+', 6, true);
-myPadStartEnd('abcd', '9', 1, false);
-myPadStartEnd('1234', '56', 2, false);
-myPadStartEnd('new', ' world ', 2, false);
+
+console.log(pad('world', 'Hello my ', 4, true));
+console.log(pad('world', '+', 7, true));
+
+
+console.log(pad('world', 'Hello my ', 8, true));
+console.log(pad('world', 'Hello my ', 12, true));
+console.log(pad('world', 'Hello my ', 13, true));
+
+console.log(pad('New', ' day', 4, false));
+console.log(pad('New', ' day', 5, false));
+console.log(pad('New', ' day', 6, false));
