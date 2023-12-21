@@ -1,9 +1,18 @@
-
-function myIsNan(value) {
-    if (typeof value === 'number') {
+function myIsNaN(value) {
+    if (typeof value === 'number' && value === value) {
         return false
     } else return true
 }
-console.log(myIsNan('test'));
-console.log(myIsNan(45));
-console.log(myIsNan(NaN));
+
+console.log(myIsNaN(NaN));
+console.log(myIsNaN(123));
+console.log(myIsNaN('abc'));
+console.log(myIsNaN(undefined));
+console.log(myIsNaN({}));
+
+
+console.log(isNaN(NaN));
+console.log(isNaN(123));
+console.log(isNaN('abc'));
+console.log(isNaN(undefined));
+console.log(isNaN({}));
