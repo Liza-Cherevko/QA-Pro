@@ -1,6 +1,6 @@
 const company = {
     name: 'Велика Компанія',
-    type:'Головна компанія',
+    type: 'Головна компанія',
     platform: 'Платформа для продажу квитків',
     sellsSolution: 'Рішення для продажу квитків',
     clients: [
@@ -27,6 +27,15 @@ const company = {
                             type: 'subSubCompany',
                             uses: 'Рішення для продажу квитків',
                             sells: 'Рішення для продажу квитків',
+                            partners: [
+                                {
+                                    name: 'Клієнт 1.2.4',
+                                    type: 'subSubCompany',
+                                    uses: 'Рішення для продажу квитків',
+                                    sells: 'Рішення для продажу квитків',
+
+                                }
+                            ]
                         }
                     ]
                 }
@@ -41,24 +50,25 @@ const company = {
     ]
 };
 
-function findValueByKey(company, companyName){
-    if(company.name == companyName){
+function findValueByKey({ name }, { clients }) {
+    if (name == name) {
         return company
     }
 
-    for(const client of company.clients){
-        if (client.name === companyName) {
+    for (const client of clients) {
+        if (client.name === name) {
             return client;
         }
         if (client.partners) {
             for (const partner of client.partners) {
-                if (partner.name === companyName) {
+                if (partner.name === name) {
                     return partner;
                 }
 
+
                 if (partner.partners) {
                     for (const subPartner of partner.partners) {
-                        if (subPartner.name === companyName) {
+                        if (subPartner.name === name) {
                             return subPartner;
                         }
                     }
@@ -66,7 +76,9 @@ function findValueByKey(company, companyName){
             }
         }
     }
-}
 
-let result = findValueByKey(company, 'лієнт 1.2.3')
+}
+// const companyName = 'Клієнт 1.2.3';
+const result = findValueByKey('Клієнт 1.2.4', company);
 console.log(result)
+
