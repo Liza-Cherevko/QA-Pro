@@ -1,16 +1,14 @@
 
-let question = +prompt('Скільки вам років?')
-let validate = Math.sign(question) == -1 || Math.sign(question) == 0
-let ageValidFirst = question == 1 || question == 21 || question == 31 || question == 41 || question == 51 || question == 61 || question == 71 || question == 81 || question == 91
-let ageValidSecond = question > 1 && question <= 4 || question > 21 && question <= 24 || question > 31 && question <= 34 || question > 41 && question <= 44 || question > 51 && question <= 54 || question > 61 && question <= 64 || question > 71 && question <= 74 || question > 81 && question <= 84 || question > 91 && question <= 94
-if (validate) {
-    console.log('невірне значення')
-} else if (ageValidFirst) {
-    console.log('Вам ' + question + ' рік');
-} else if (ageValidSecond) {
-    console.log('Вам ' + question + ' роки');
+let year  = +prompt('Скільки вам років?')
+
+if (!isNaN(year ) && parseInt(year ) >= 0) { 
+    if (parseInt(year) % 10 === 1 && parseInt(year) % 10 !== 11) { 
+        alert(`Вам ${year} рік`)
+    } else if ([2, 3, 4].includes(parseInt(year) % 10) && ![12, 13, 14].includes(parseInt(year) % 100)) {
+        alert(year + " роки");
+    }  else {
+        alert(year + " років");
+    }
+} else {
+    alert("Введено некоректне значення для року.");
 }
-else console.log('Вам ' + question + ' років');
-
-
-
